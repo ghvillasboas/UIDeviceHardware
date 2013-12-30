@@ -3,7 +3,7 @@ UIDeviceHardware
 
 A simple and easy to use helper class to extract more precisely the current hardware platform being used by the user.
 
-It outputs tree formats:
+It outputs three formats:
 
 1. Platform format: The raw platform given by the system:
 		
@@ -15,7 +15,7 @@ It outputs tree formats:
         // Outputs something like: iPhone 4, iPod Touch 2G, iPad 4 (GSM+CDMA)
         [UIDeviceHardware platformString]
         
-3. GenericDeviceType format: An smart output based on the device type and screen size
+3. GenericDeviceType format: A smart output based on the device type and screen size
 
         // Outputs something like: UIDeviceHardwareGenericTypePhone35, UIDeviceHardwareGenericTypePod40
         [UIDeviceHardware genericDeviceType]
@@ -23,10 +23,10 @@ It outputs tree formats:
 General considerations
 -------------------------
 * Uses a more low level system information extractor for better performance
-* This will be a constantly revised source for new devices released by Apple
+* This will be a constantly revised source for new devices released by Apple (last update: 12/30/2013)
 * Supports even the simulator if needed (x86_64/Simulator/UIDeviceHardwareGenericTypeUnknown)
 
-Live example
+Live examples
 -------------------------
 
     if ([UIDeviceHardware genericDeviceType] == UIDeviceHardwareGenericTypePhone35 ||
